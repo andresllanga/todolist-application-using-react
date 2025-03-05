@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import "../../styles/index.css"
 
 const TodoList = () => {
     const[tasks,setTasks]=useState([]);
@@ -12,7 +13,7 @@ const TodoList = () => {
     }
     const handleDelete = index => setTasks(tasks.filter((_,i) => i !== index))
     return(
-        <div>
+        <div className="todo-list">
         <h1>TodoList</h1>
         <form onSubmit={handleSubmit}>
             <input type="text" value={newTask} onChange={(e) =>setNewTask(e.target.value)} placeholder="Escribe..."/>
